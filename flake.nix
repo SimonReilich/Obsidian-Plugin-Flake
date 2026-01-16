@@ -8,19 +8,18 @@
   outputs =
     { self, nixpkgs }:
     let
-      pkgs = nixpkgs.legacyPackages.x86_64-linux;
+      system = "x86_64-linux";
+      pkgs = nixpkgs.legacyPackages.${system};
     in
     {
+      packages.${system} = {
+        homepage = pkgs.callPackage ./homepage.nix { };
+        git = pkgs.callPackage ./git.nix { };
+        note-linker = pkgs.callPackage ./note-linker.nix { };
+        book-search = pkgs.callPackage ./book-search.nix { };
+        tag-wrangler = pkgs.callPackage ./tag-wrangler.nix { };
+      };
 
-      packages.x86_64-linux.homepage = pkgs.callPackage ./homepage.nix { };
-
-      packages.x86_64-linux.git = pkgs.callPackage ./git.nix { };
-
-      packages.x86_64-linux.note-linker = pkgs.callPackage ./note-linker.nix { };
-
-      packages.x86_64-linux.book-search = pkgs.callPackage ./book-search.nix { };
-
-      packages.x86_64-linux.tag-wrangler = pkgs.callPackage ./tag-wrangler.nix { };
-
+      checks.${system} = self.packages.${system};
     };
 }

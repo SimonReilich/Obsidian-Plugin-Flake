@@ -6,22 +6,22 @@
 
 pkgs.stdenv.mkDerivation rec {
   pname = "obsidian.plugins.homepage";
-  version = "4.2.2";
+  version = "4.3.1";
   repo = "https://github.com/mirnovov/obsidian-homepage";
 
   mainJs = pkgs.fetchurl {
     url = "${repo}/releases/download/${version}/main.js";
-    sha256 = "sha256-MD6RiN42iOI2SSe12mOqoilp6sii+rRw9aHkha+sBSw=";
+    sha256 = "sha256-WcPB8ZooUZICIBQ4PtwXFa9WrZw79enij8G2OrZayJA=";
   };
 
   manifest = pkgs.fetchurl {
     url = "${repo}/releases/download/${version}/manifest.json";
-    sha256 = "sha256-hgv+W9zxFdbMrJDbwl5k8QwY1pwLRZrGMoBk0lo7ajg=";
+    sha256 = "sha256-U93QP9VaKm8INkA5itbljDVPzftR5KODA6qM9G/POb8=";
   };
 
   stylesCss = pkgs.fetchurl {
     url = "${repo}/releases/download/${version}/manifest.json";
-    sha256 = "sha256-hgv+W9zxFdbMrJDbwl5k8QwY1pwLRZrGMoBk0lo7ajg=";
+    sha256 = "sha256-U93QP9VaKm8INkA5itbljDVPzftR5KODA6qM9G/POb8=";
   };
 
   phases = [ "installPhase" ];
