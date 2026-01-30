@@ -5,7 +5,7 @@
 }:
 
 pkgs.stdenv.mkDerivation rec {
-  pname = "obsidian.plugins.obsidian-book-search-plugin";
+  pname = "obsidian.plugins.book-search";
   version = "0.7.5";
   repo = "https://github.com/anpigon/obsidian-book-search-plugin";
 

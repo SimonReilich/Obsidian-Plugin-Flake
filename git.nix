@@ -5,7 +5,7 @@
 }:
 
 pkgs.stdenv.mkDerivation rec {
-  pname = "obsidian.plugins.obsidian-git";
+  pname = "obsidian.plugins.git";
   version = "2.36.0";
   repo = "https://github.com/Vinzent03/obsidian-git";
 

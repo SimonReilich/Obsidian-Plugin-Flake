@@ -5,9 +5,9 @@
 }:
 
 pkgs.stdenv.mkDerivation rec {
-  pname = "obsidian.plugins.note-linker";
-  version = "1.2.9";
-  repo = "https://github.com/AlexW00/obsidian-note-linker";
+  pname = "obsidian.plugins.note-count";
+  version = "1.2.4";
+  repo = "https://github.com/ozntel/file-explorer-note-count";
 
   mainJs = pkgs.fetchurl {
     url = "${repo}/releases/download/${version}/main.js";
@@ -16,12 +16,12 @@ pkgs.stdenv.mkDerivation rec {
 
   manifest = pkgs.fetchurl {
     url = "${repo}/releases/download/${version}/manifest.json";
-    sha256 = "sha256-9vtwGe8s81RMvXDE4NVFjIWzT935qjBj92OV6kVGebU=";
+    sha256 = "sha256-tQ2km02kkO0CzFl10qxGSVaqLTmlaNzR+X4fwL7aNG0=";
   };
 
   stylesCss = pkgs.fetchurl {
     url = "${repo}/releases/download/${version}/manifest.json";
-    sha256 = "sha256-9vtwGe8s81RMvXDE4NVFjIWzT935qjBj92OV6kVGebU=";
+    sha256 = "sha256-tQ2km02kkO0CzFl10qxGSVaqLTmlaNzR+X4fwL7aNG0=";
   };
 
   phases = [ "installPhase" ];
