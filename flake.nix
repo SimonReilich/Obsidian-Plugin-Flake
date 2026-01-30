@@ -13,10 +13,11 @@
     in
     {
       packages.${system} = {
-        homepage = pkgs.callPackage ./homepage.nix { };
-        git = pkgs.callPackage ./git.nix { };
-        note-linker = pkgs.callPackage ./note-linker.nix { };
         book-search = pkgs.callPackage ./book-search.nix { };
+        git = pkgs.callPackage ./git.nix { };
+        graph-banner = pkgs.callPackage ./graph-banner.nix { };
+        homepage = pkgs.callPackage ./homepage.nix { };
+        note-linker = pkgs.callPackage ./note-linker.nix { };
         tag-wrangler = pkgs.callPackage ./tag-wrangler.nix { };
       };
 
