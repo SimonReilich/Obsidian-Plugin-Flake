@@ -19,6 +19,7 @@
         homepage = pkgs.callPackage ./homepage.nix { };
         note-linker = pkgs.callPackage ./note-linker.nix { };
         tag-wrangler = pkgs.callPackage ./tag-wrangler.nix { };
+        templater = pkgs.callPackage ./templater.nix { };
       };
 
       checks.${system} = self.packages.${system};
