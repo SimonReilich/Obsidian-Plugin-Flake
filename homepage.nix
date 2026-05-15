@@ -6,7 +6,7 @@
 
 pkgs.stdenv.mkDerivation rec {
   pname = "obsidian.plugins.homepage";
-  version = "4.4.0";
+  version = "4.4.2";
   repo = "https://github.com/mirnovov/obsidian-homepage";
 
   mainJs = pkgs.fetchurl {
